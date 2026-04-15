@@ -1,32 +1,50 @@
-<h1>My Hobby: [Your Hobby Name]</h1>
-<img src="hobby.jpg" alt="Surfing" style="width:400px; margin-bottom: 20px;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Hobby: Surfing</title>
+    <link rel="stylesheet" href="mystyles.css">
+</head>
+<body>
+    <a href="#video-section" class="jump-link">Jump to Surfing Video</a> | 
+    <a href="index.html">Back to Professional Site</a>
 
+    <h1 style="text-align: center; margin-top: 30px;">My Hobby: Surfing</h1>
+    
+    <div style="text-align: center;">
+        <img src="hobby.jpg" alt="Surfing" style="width: 600px; border-radius: 15px;">
+    </div>
 
-<div class="content-box">
-    <h3>Live Data Visualization</h3>
-    <div class='tableauPlaceholder' id='viz1713220000000' style='position: relative'>
-        <noscript><a href='#'><img alt='Dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wo&#47;WorldIndicators_16263000000000&#47;Dashboard&#47;1_rss.png' style='border: none' /></a></noscript>
-        <object class='tableauViz'  style='display:none;'>
-            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-            <param name='embed_code_version' value='3' /> 
-            <param name='site_root' value='' />
-            <param name='name' value='WorldIndicators&#47;Dashboard' />
-            <param name='tabs' value='no' />
-            <param name='toolbar' value='yes' />
-            <param name='animate_transition' value='yes' />
-            <param name='display_static_image' value='yes' />
-            <param name='display_spinner' value='yes' />
-            <param name='display_overlay' value='yes' />
-            <param name='display_count' value='yes' />
-            <param name='language' value='en-US' />
-        </object>
-    </div>                
-    <script type='text/javascript'>                    
-        var divElement = document.getElementById('viz1713220000000');                    
-        var vizElement = divElement.getElementsByTagName('object')[0];                    
-        vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
-        var scriptElement = document.createElement('script');                    
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
-    </script>
-</div>
+    <div class="content-box">
+        <h3>Why I Love Surfing</h3>
+        <ol>
+            <li>The Physical Challenge
+                <ul>
+                    <li>Paddling builds upper body strength</li>
+                    <li>Balance improves core stability</li>
+                </ul>
+            </li>
+            <li>Connection with Nature</li>
+            <li>Travel Opportunities</li>
+        </ol>
+    </div>
+
+    <div class="content-box">
+        <h3>Surfing & Storm Data Insights</h3>
+        <div class='tableauPlaceholder' id='viz1713220000000' style='position: relative; margin: 0 auto;'>
+            <object class='tableauViz' style='display:none;'>
+                <param name='name' value='RegionalSampleWorkbook&#47;Storms' />
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+            </object>
+        </div>
+        <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+    </div>
+
+    <div id="video-section" class="content-box">
+        <h3>Surfing in Action</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Yp_pS_6k0-o" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+</body>
+</html>

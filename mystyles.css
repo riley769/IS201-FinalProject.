@@ -1,10 +1,26 @@
+/* REQUIREMENT: Custom Background Color */
 body {
-    font-family: 'Arial', sans-serif; /* Requirement: Font Family */
-    color: #333333; /* Requirement: Font Color */
+    background-color: #f0f8ff; /* Light Alice Blue */
+    /* REQUIREMENT: Font Family */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* REQUIREMENT: Font Color */
+    color: #2c3e50;
+    margin: 40px;
 }
-.content-box { /* Requirement: 1 of 3 Divs */
+
+/* REQUIREMENT: Style for Divs (1 of 3) */
+.content-box {
     background-color: white;
-    padding: 20px;
-    margin: 20px;
-    border: 1px solid gray;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.jump-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
 }

@@ -1,30 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Number Guessing App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surf Trip Calculator | Riley Fewkes</title>
     <style>
-        body { text-align: center; font-family: sans-serif; background-color: #2c3e50; color: white; padding-top: 50px; }
-        input { padding: 10px; border-radius: 5px; border: none; }
-        button { padding: 10px 20px; background-color: #1abc9c; color: white; border: none; cursor: pointer; border-radius: 5px; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0077be, #00a8e8);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .app-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            text-align: center;
+            width: 350px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        h2 { margin-bottom: 20px; }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background-color: #ffcc00;
+            color: #333;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover { background-color: #e6b800; transform: scale(1.05); }
+        #result { margin-top: 20px; font-weight: bold; font-size: 1.1em; }
+        .back-link { display: block; margin-top: 20px; color: white; text-decoration: none; font-size: 0.8em; opacity: 0.7; }
     </style>
 </head>
 <body>
-    <h1>The AI Number Guessing Game</h1>
-    <p>I'm thinking of a number between 1 and 10. Can you guess it?</p>
-    <input type="number" id="guessInput">
-    <button onclick="checkGuess()">Guess!</button>
-    <p id="message"></p>
-    <br><br>
-    <a href="scratch.html" style="color: #1abc9c;">Back to Hobby Page</a>
 
-    <script>
-        let target = Math.floor(Math.random() * 10) + 1;
-        function checkGuess() {
-            let userGuess = document.getElementById("guessInput").value;
-            let msg = document.getElementById("message");
-            if (userGuess == target) { msg.innerHTML = "Correct! You got it!"; }
-            else { msg.innerHTML = "Try again!"; }
+<div class="app-container">
+    <h2>🏄‍♂️ Surf Trip Planner</h2>
+    <p>How much do you need for your next trip?</p>
+    
+    <input type="number" id="goal" placeholder="Trip Goal (e.g. $2000)">
+    <input type="number" id="saved" placeholder="Already Saved">
+    <input type="number" id="monthly" placeholder="Monthly Savings">
+    
+    <button onclick="calculateTrip()">Calculate Timeline</button>
+
+    <div id="result"></div>
+
+    <a href="scratch.html" class="back-link">← Back to Hobby Page</a>
+</div>
+
+<script>
+    function calculateTrip() {
+        const goal = document.getElementById('goal').value;
+        const saved = document.getElementById('saved').value;
+        const monthly = document.getElementById('monthly').value;
+        const resultDiv = document.getElementById('result');
+
+        if (goal <= 0 || monthly <= 0) {
+            resultDiv.innerHTML = "Please enter valid numbers!";
+            return;
         }
-    </script>
+
+        const remaining = goal - saved;
+        if (remaining <= 0) {
+            resultDiv.innerHTML = "Pack your bags! You're ready to hit the waves! 🌊";
+        } else {
+            const months = Math.ceil(remaining / monthly);
+            resultDiv.innerHTML = `You need $${remaining} more. <br> You'll be surfing in <strong>${months} months!</strong> 🤙`;
+        }
+    }
+</script>
+
 </body>
 </html>
