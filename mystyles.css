@@ -1,0 +1,10 @@
+body {
+    font-family: 'Arial', sans-serif; /* Requirement: Font Family */
+    color: #333333; /* Requirement: Font Color */
+}
+.content-box { /* Requirement: 1 of 3 Divs */
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid gray;
+}

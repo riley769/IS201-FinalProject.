@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Guessing App</title>
+    <style>
+        body { text-align: center; font-family: sans-serif; background-color: #2c3e50; color: white; padding-top: 50px; }
+        input { padding: 10px; border-radius: 5px; border: none; }
+        button { padding: 10px 20px; background-color: #1abc9c; color: white; border: none; cursor: pointer; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>The AI Number Guessing Game</h1>
+    <p>I'm thinking of a number between 1 and 10. Can you guess it?</p>
+    <input type="number" id="guessInput">
+    <button onclick="checkGuess()">Guess!</button>
+    <p id="message"></p>
+    <br><br>
+    <a href="scratch.html" style="color: #1abc9c;">Back to Hobby Page</a>
+
+    <script>
+        let target = Math.floor(Math.random() * 10) + 1;
+        function checkGuess() {
+            let userGuess = document.getElementById("guessInput").value;
+            let msg = document.getElementById("message");
+            if (userGuess == target) { msg.innerHTML = "Correct! You got it!"; }
+            else { msg.innerHTML = "Try again!"; }
+        }
+    </script>
+</body>
+</html>
