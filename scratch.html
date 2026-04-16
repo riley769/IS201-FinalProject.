@@ -6,11 +6,17 @@
     <link rel="stylesheet" href="mystyles.css">
 </head>
 <body>
-    <a href="#video-section" class="jump-link">Jump to Surfing Video</a> | 
-    <a href="index.html">Back to Professional Site</a>
 
-    <h1 style="text-align: center; margin-top: 30px;">My Hobby: Surfing</h1>
-    
+    <div class="nav-bar">
+        <a href="#video-section">Jump to Surfing Video</a> |
+        <a href="index.html">Back to Professional Site</a> |
+        <a href="webapp.html">Surf Trip Calculator</a>
+    </div>
+
+    <div class="page-header">
+        <h1>My Hobby: Surfing</h1>
+    </div>
+
     <div style="text-align: center;">
         <img src="hobby.jpg" alt="Surfing" style="width: 600px; border-radius: 15px;">
     </div>
@@ -29,15 +35,28 @@
         </ol>
     </div>
 
+    <div class="content-box">
+        <h3>Surfing & Storm Data Insights</h3>
+        <div class='tableauPlaceholder' id='viz1713220000000' style='position: relative; margin: 0 auto;'>
+            <object class='tableauViz' style='display:none;'>
+                <param name='name' value='RegionalSampleWorkbook&#47;Storms' />
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+            </object>
+        </div>
+        <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+    </div>
+
     <div id="video-section" class="content-box" style="text-align: center;">
-    <h3>Watch Surfing in Action</h3>
-    <iframe width="560" height="315" 
-       src="https://www.youtube.com/embed/xtHZKToMvus"
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-    </iframe>
-</div>
+        <h3>Watch Surfing in Action</h3>
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/xtHZKToMvus"
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
 </body>
 </html>

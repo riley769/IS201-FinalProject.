@@ -1,14 +1,12 @@
-/* REQUIREMENT: Custom Background Color */
+/* REQUIREMENT: Custom Background Color + Font Family + Font Color */
 body {
-    background-color: #f0f8ff; /* Light Alice Blue */
-    /* REQUIREMENT: Font Family */
+    background-color: #f0f8ff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* REQUIREMENT: Font Color */
     color: #2c3e50;
     margin: 40px;
 }
 
-/* REQUIREMENT: Style for Divs (1 of 3) */
+/* REQUIREMENT: Div 1 of 3 - Content boxes */
 .content-box {
     background-color: white;
     padding: 25px;
@@ -19,8 +17,25 @@ body {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.jump-link {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: bold;
+/* REQUIREMENT: Div 2 of 3 - Page header/title area */
+.page-header {
+    text-align: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
 }
+
+/* REQUIREMENT: Div 3 of 3 - Navigation bar */
+.nav-bar {
+    background-color: #3498db;
+    padding: 10px 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+/* REQUIREMENT: Style 4 - Links in nav *
